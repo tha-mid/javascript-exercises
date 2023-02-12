@@ -7,28 +7,16 @@ const subtract = function(a, b) {
 };
 
 const sum = function(numbers) {
-  let total = 0;
-  numbers.forEach(num => {
-    total += num;
-  })
-  return total;
+  return numbers.reduce((total, num) => total + num, 0);
 };
 
 const multiply = function(numbers) {
-  let total = 1;
-  numbers.forEach(num => {
-    total *= num;
-  });
-  return total;
+  return numbers.reduce((total, num) => total * num, 1);
 
 };
 
 const power = function(a, b) {
-  let total = a;
-  for (let i = 1; i < b; i++) {
-    total *= a; 
-  }
-	return total;
+  return Math.pow(a, b);
 };
 
 const factorial = function(a) {
@@ -37,7 +25,6 @@ const factorial = function(a) {
     total *= i; 
   }
   return total;
-	
 };
 
 // Do not edit below this line
